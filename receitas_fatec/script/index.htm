@@ -15,14 +15,33 @@
             .receitas_fatec-3-hex { color: #BF7D56; }
             .receitas_fatec-4-hex { color: #F2F2F2; }
             .receitas_fatec-5-hex { color: #262626; }
-            .menus {
+            .menus{
+                border: 1px solid #262626;
+                padding: 10px;
                 display: inline;
+                background-color: #BF8756; 
+            }
+            .menus_ul{
+                color: #262626;
+                background-color: #F2F2F2;
                 text-align: center;
+                list-style-type: none;
             }
             body{
                 font-family: "poppins", sans-serif;
                 font-weight: 400;
                 font-style: normal;
+            }
+            ol{
+                text-align: justify;
+                margin: 5px;
+                padding: 2%;
+                background-color: #F2F2F2
+            }
+            img{
+                max-width: 100%;
+                height: auto;
+                border: 2px solid #BF7D56;
             }
             h1, h2{ 
                 text-align: center;
@@ -36,19 +55,6 @@
                 font-family: "poppins", sans-serif;
                 font-weight: 400;
                 font-style: normal;
-            }
-            ul{
-                text-align: center;
-                list-style-type: none;
-                margin: 1px;
-                padding: 5px;
-                overflow: hidden;
-                background-color: #F2F2F2
-            }
-            li a{
-                color: #262626;
-                padding: 16px;
-                text-decoration: none;
             }
             table, th{
                 padding: 10px;
@@ -64,7 +70,7 @@
         <header>
             <h1>BOLINHA DE CHURROS</h1>
             <nav>
-                <ul>
+                <ul class="menus_ul">
                     <li class="menus"><a href="#Ingredientes">Ingredientes</a></li>
                     <li class="menus"><a href="#Modo de preparo">Modo de preparo</a></li>
                 </ul>
@@ -86,10 +92,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>35 min</td>
-                            <td>8 porções</td>
-                            <td>1168</td>
-                            <td>4</td>
+                            <td>35 min</td><td>8 porções</td><td>1168</td><td>4</td>
                         </tr>
                     </tbody>
                 </table>
@@ -97,6 +100,7 @@
             </section>
             <section>
                 <h2>INGREDIENTES</h2>
+                <br>
                 <h3>Massa</h3>
                 <ul>
                     <li>200 ml de água</li>
@@ -105,11 +109,13 @@
                     <li>1 colher (sopa) de manteiga</li>
                     <li>1 colher (chá) de canela em pó</li>
                 </ul>
+                <hr>
                 <h3>Empanamento</h3>
                 <ul>
                     <li>1 colher (sopa) de canela</li>
                     <li>1/2 xícara de açúcar</li>
                 </ul>
+                <hr>
                 <h3>Recheio</h3>
                 <ul>
                     <li>150 g de doce de leite</li>
@@ -118,6 +124,17 @@
         <br><hr><br>
             <section>
                 <h2>MODO DE PREPARO</h2>
+                <br>
+                <ol>
+                    <li>Em uma panela, adicione a água, a manteiga, a canela e o açúcar</li>
+                    <li>Misture bem até o açúcar dissolver.</li>
+                    <li>Em seguida, adicione a farinha de trigo aos poucos</li>
+                    <li>Misture tudo com uma colher de pau até desgrudar da panela, se necessário, adicione água aos poucos para chegar no ponto.</li>
+                    <li>Retire da panela e sove até ficar uma massa homogênea.</li>
+                    <li>Faça bolinhas e, com o dedo, pressione fazendo um furo no meio.</li>
+                    <li>Frite submerso no óleo.</li>
+                    <li>Passe na mistura de açúcar e canela e coloque o recheio com ajuda de um saco de confeiteiro e um bico.</li>
+                </ol>
             </section>
         </main>
         <footer>
