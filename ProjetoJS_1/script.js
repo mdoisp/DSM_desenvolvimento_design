@@ -26,6 +26,43 @@ function mediaPonderada()
 }
 function calculoIdade()
 {
-    let anoNasc = Number(document.getElementById('anoNasc').value);
-    console.log(anoNasc);
+    let anoNascimento = Number(document.getElementById('anoNascimento').value);
+    let dataAtual = new Date();
+    let anoAtual = dataAtual.getFullYear();
+    let anos = anoAtual - anoNascimento
+    let dataNascimento = new Date(anoNascimento, 0, 1);
+    let diferencaMilissegundos = dataAtual - dataNascimento;
+    let idade2050 = 2050 - anoNascimento;
+    dias = Math.floor(diferencaMilissegundos / (1000 * 60 * 60 * 24));
+    meses = Math.floor(dias / 31);
+    horas = Math.floor(diferencaMilissegundos / (1000 * 60 * 60));
+    minutos = Math.floor(diferencaMilissegundos / (1000 * 60));
+    semanas = dias / 7;
+    console.log(`A pessoa tem ${anos} ano(s), ${meses} mese(s), ${dias} dia(s), ${horas} horas, ${minutos} minutos e ${semanas.toFixed(0)} semanas aproximadamente, contando a partir de 1 de janeiro e em 2050 terá ${idade2050} anos!`)
+}
+function consumoMedio()
+{
+    let km = Number(document.getElementById('km').value);
+    let litros = Number(document.getElementById('litros').value);
+    consumo = km / litros
+    document.getElementById('resultadoConsumo').innerText = `O consumo médio é de ${consumo} km/litro`
+}
+function calculoSalario()
+{
+    let valorNormal = Number(document.getElementById('valorHr').value);
+    let refeicoesFeitas = Number(document.getElementById('refeicoes').value);
+    let valorAcrescido = (valorNormal * 40) + (valorNormal * 24 * 3);
+    let desconto = 1.50 * refeicoesFeitas;
+    salarioBruto = valorAcrescido;
+    salarioLiquido = salarioBruto - desconto;
+    document.getElementById('resultadoEx6').innerText = `Um funcionário que trabalhou 62 horas irá receber: 
+    Salário Bruto = R$${salarioBruto.toFixed(2)}
+    Descontos = R$${desconto.toFixed(2)}
+    Salário Líquido = R$${salarioLiquido.toFixed(2)}`
+}
+function gerarRandom()
+{
+    let aleatorio = Math.floor(Math.random() * 10000);
+    resultado = (aleatorio % 2 === 0) ? "Par" : "Ímpar"; 
+    document.getElementById('resultadoEx7').innerText = `${aleatorio} é ${resultado}!`
 }
